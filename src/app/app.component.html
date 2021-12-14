@@ -1,0 +1,8 @@
+<body>
+    
+
+    <app-sidnav></app-sidnav>
+    <button class="bt" (click)="logout()" *ngIf="token">Logout</button>
+<router-outlet *ngIf="token" ></router-outlet>
+<!-- *ngIf="token" -->
+</body>

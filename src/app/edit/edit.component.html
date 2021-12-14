@@ -1,0 +1,19 @@
+<div class="container">
+    <form id="">
+      <label for="name">Emp Name</label>
+      <input type="text" [(ngModel)]="empObj.empname"[ngModelOptions]="{standalone: true}" id="name" [value]="empObj.empname">
+  
+      <label for="Eid">Emp ID</label>
+      <input type="text"[value]="emid" [ngModelOptions]="{standalone: true}" [(ngModel)]="empObj.empid" id="Eid" [value]="empObj.empid">
+      
+      <label for="age">Age</label>
+      <input type="text" [(ngModel)]="empObj.empage" [ngModelOptions]="{standalone: true}"id="age" [value]="empObj.empage">
+  
+      
+  
+  <button class="button1" (click)="updateEmp()" type="submit">Update</button>
+      
+       <!-- <button type="button" >Back</button>  -->
+    </form>
+    
+  </div> 

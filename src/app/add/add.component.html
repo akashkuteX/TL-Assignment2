@@ -1,0 +1,19 @@
+<div class="container">
+    <form id="">
+      <label for="name">Emp Name</label>
+      <input type="text" [(ngModel)]="empObj.empname" name="name" placeholder="Your name">
+  
+      <label for="Eid">Emp ID</label>
+      <input type="text"[value]="emid" disabled [(ngModel)]="empObj.empid" name="empid" placeholder="Your Emp ID">
+      
+      <label for="age">Age</label>
+      <input type="text" [(ngModel)]="empObj.empage" name="age" placeholder="Your age">
+  
+      
+  
+  <button class="button1" (click)="saveEmployee()" type="submit">Submit</button>
+      
+      <!-- <button type="button" >Back</button> -->
+    </form>
+    
+  </div>

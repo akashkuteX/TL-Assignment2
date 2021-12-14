@@ -1,0 +1,29 @@
+<div class="bar">
+  
+    <input style="height: 40px;font-size: larger;border-radius: 5px;" type="text"name="firstName"[(ngModel)]="firstName" (ngModelChange)="Search()" placeholder="Search..." class="form-control">
+  <button class="clr">Clear</button>
+</div>
+<table>
+  <thead>
+    <tr>
+      <!-- <th>EmpId</th> -->
+      <th (click)="sort('firstName')" >FirstName</th>
+      <th (click)="sort('age')" >Age</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let emp of empTable| orderBy: orderHeader: reverse| paginate:{itemsPerPage:5,currentPage:p}; let i = index">
+      <!-- <td>{{i+1}}</td> -->
+      <!-- <td>{{emp.empid}}</td>     -->
+      <td>{{emp.empname}}</td>
+      <td>{{emp.empage}}</td>
+      <td>
+          <button class="but1" [routerLink]="['edit/',emp.empid]">Edit</button>
+          <button class="but2"(click)='delete(emp.empid)'>Delete</button>
+      </td>
+    </tr>
+  </tbody>
+  <pagination-controls  class="pagination" (pageChange)="p = $event"></pagination-controls>
+  
+</table>
